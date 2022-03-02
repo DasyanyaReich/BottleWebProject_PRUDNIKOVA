@@ -9,7 +9,7 @@
     <script src="/static/scripts/modernizr-2.6.2.js"></script>
 </head>
 
-<body background = static/images/12.png>
+<body background = "static/images/13.jpg">
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
