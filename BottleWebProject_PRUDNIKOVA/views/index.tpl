@@ -3,7 +3,7 @@
     <img src="static\images\i.png"> 
 </div>
 <div class="col-md-5">
-    <h2><strong><font size = "14" face = "colonna mt">Summary of "Eugene Onegin" Alexander Pushkin</font></strong></h2>
+    <h2><strong><font size = "14" face = "colonna mt">Summary of work "Eugene Onegin" Alexander Pushkin</font></strong></h2>
     <p class="lead"><font size = "5" face = "garamond">Brief analysis, history of creation, place and time of action, content, genre, results of the work</font></p>
 
 </div>
@@ -69,7 +69,7 @@ Genre - A. S. Pushkin himself defined the genre of "Eugene Onegin" as a novel in
     <p><font size = "5" face = "garamond">The love storyline of the novel is an epic beginning, the development of the action takes place in it. The author's reflections and his digressions are a lyrical beginning, and the poet defines his work as a "lyric-epic" novel in verse.</font></p>
     <p><font size = "5" face = "garamond">During the creation of the novel, the poet had already abandoned romanticism, starting a new round of creativity, and the novel "Eugene Onegin" received a realistic direction.</font></p>
     <p><font size = "5" face = "garamond">Despite the fact that the finale of the novel is not too optimistic, it is written in such a lively and sonorous language that the reader is optimistic about the future, sincerely believes in noble impulses and real feelings. "Eugene Onegin" is truly an expression of the strength and power of the talent of the unsurpassed Russian poet and writer, the great genius Alexander Sergeevich Pushkin.</font></p>
-    <p><a class="btn btn-warning btn-lg" href="https://sochinimka.ru/sochinenie/po-literature/pushkin/evgenij-onegin-istoriya-sozdaniya">Go to the short content &raquo;</a></p>
+    <p><a class="btn btn-warning btn-lg" href="https://sochinimka.ru/sochinenie/po-literature/pushkin/evgenij-onegin-istoriya-sozdaniya">Learn about other heroes &raquo;</a></p>
     </div>
      <div class="row">
     <div class="col-md-10">
