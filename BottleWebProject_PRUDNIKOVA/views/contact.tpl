@@ -64,13 +64,6 @@
 </font></div>
 <p>
  ___________________________________________________________________________________________________________________________________________________</p>
- <div class="row"><font face = "garamond">
-     <div class="col-md-6">
-        <p><center><a class="btn btn-default" href="/">Return</a></center></p>
-     </div>
-     <div class="col-md-6">
-        <p><center><a class="btn btn-default" href="/">About us</a></center></p>
-     </div>
-</font></div>
+ 
 
 
