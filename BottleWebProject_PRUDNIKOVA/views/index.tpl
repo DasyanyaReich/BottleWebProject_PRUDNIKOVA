@@ -61,7 +61,6 @@ Genre - A. S. Pushkin himself defined the genre of "Eugene Onegin" as a novel in
         <p><font size = "5" face = "garamond">The climax of the novel - Vladimir dies in a duel, Olga marries another, Tatiana is married to an important general.</font></p>
         <p><font size = "5" face = "garamond">The denouement is Tatiana's meeting with Onegin, their explanation, where the heroine, who continues to love Eugene, rejects him. The final itself is open, there is no concrete certainty of the future fate of the hero.</font></p>
         <p><font size = "5" face = "garamond">In the chapters of the poem there are lyrical excursions that do not depart from the main plot, but at the same time are an appeal of the author to the reader. Initially, the poet conceived 9 chapters, but the strict limits of censorship forced the poet to remove one of the chapters, and to conclude all his thoughts and feelings between the lines and use lyrical digressions. Therefore, all the chapters and the poem as a whole have a kind of unfinished look, some kind of understatement.</font></p>
-        <p><a class="btn btn-warning btn-lg" href="https://sochinimka.ru/sochinenie/po-literature/pushkin/evgenij-onegin-istoriya-sozdaniya">Go to the short content &raquo;</a></p>
         </div>
     <div class="row">
     <div class="col-md-10">
@@ -69,7 +68,6 @@ Genre - A. S. Pushkin himself defined the genre of "Eugene Onegin" as a novel in
     <p><font size = "5" face = "garamond">The love storyline of the novel is an epic beginning, the development of the action takes place in it. The author's reflections and his digressions are a lyrical beginning, and the poet defines his work as a "lyric-epic" novel in verse.</font></p>
     <p><font size = "5" face = "garamond">During the creation of the novel, the poet had already abandoned romanticism, starting a new round of creativity, and the novel "Eugene Onegin" received a realistic direction.</font></p>
     <p><font size = "5" face = "garamond">Despite the fact that the finale of the novel is not too optimistic, it is written in such a lively and sonorous language that the reader is optimistic about the future, sincerely believes in noble impulses and real feelings. "Eugene Onegin" is truly an expression of the strength and power of the talent of the unsurpassed Russian poet and writer, the great genius Alexander Sergeevich Pushkin.</font></p>
-    <p><a class="btn btn-warning btn-lg" href="https://sochinimka.ru/sochinenie/po-literature/pushkin/evgenij-onegin-istoriya-sozdaniya">Learn about other heroes &raquo;</a></p>
     </div>
      <div class="row">
     <div class="col-md-10">
