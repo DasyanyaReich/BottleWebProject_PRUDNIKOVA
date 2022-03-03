@@ -32,7 +32,7 @@ The composition is a poetic novel consisting of eight chapters.
 Genre - A. S. Pushkin himself defined the genre of "Eugene Onegin" as a novel in verse, highlighting the lyric-epic content.</font>
 </p>
 <p><font size = "5" face = "garamond">The direction is Realism.</font></p>
-        <p><font size = "10" <a class="btn btn-warning btn-lg" href="http://hronika.su/kratkij-analiz-romana-evgenij-onegin-po-planu/">Learn more &raquo;</a></font></p>
+        <p><a class="btn btn-warning btn-lg" href="http://hronika.su/kratkij-analiz-romana-evgenij-onegin-po-planu/">Learn more &raquo;</a></p>
     </div>
     <div class="col-md-10">
         <h2><strong><font size = "14" face = "colonna mt">History of creation</font></strong></h2>
