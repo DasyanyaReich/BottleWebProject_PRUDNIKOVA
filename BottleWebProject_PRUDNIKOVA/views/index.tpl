@@ -1,7 +1,7 @@
 % rebase('layout.tpl', title='Evgenij Onegin', year=year)
 <!--Вставка начальной картинки--> 
 <div class="col-md-5">
-    <img src="static\images\i.png"> 
+    <img src="static\images\img_SummaryOfWork\i.png"> 
 </div>
 <!--Вставка названия страницы--> 
 <div class="col-md-5">
@@ -18,7 +18,7 @@
 </div>
 <!--Вставка фотографии автора произведения--> 
 <div class="col-md-4">
-    <img width = "300" src="static\images\Puskin.png"> 
+    <img width = "300" src="static\images\img_SummaryOfWork\Puskin.png"> 
     <ddk>Alexander Sergeyevich Pushkin</ddk>
 </div>
 <!--Вставка раздела "Краткий анализ"--> 
@@ -54,7 +54,7 @@ The composition is a poetic novel consisting of eight chapters.</ddk></p>
         </div>
         <div class="col-md-5">
 <!--Вставка фотографии "Санкт-Петербург в 1825г"--> 
-    <img width = "500" src="static\images\spb1.png"> 
+    <img width = "500" src="static\images\img_SummaryOfWork\spb1.png"> 
     <p><ddk>Map of St. Petersburg 1825</ddk></p>
     </div>
 <!--Вставка раздела "Содержание"--> 
