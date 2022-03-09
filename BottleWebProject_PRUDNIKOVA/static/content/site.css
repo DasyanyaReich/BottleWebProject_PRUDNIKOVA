@@ -2,7 +2,15 @@ body {
     padding-top: 50px;
     padding-bottom: 20px;
 }
-
+ddk {
+    font-size: 25px;
+    font-family: garamond;
+}
+ddkHading {
+    font-size: 50px;
+    font-family: colonna mt;
+    font-weight: bold;
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
