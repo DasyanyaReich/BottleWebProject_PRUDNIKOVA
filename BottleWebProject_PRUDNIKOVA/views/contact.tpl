@@ -1,16 +1,18 @@
 % rebase('layout.tpl', title='Characters', year=year)
-
+<!--Заголовок страницы-->
         <h2><strong><ddkHading>Eugene Onegin</ddkHading></strong></h2>
-        <p><font size = "5.5" face = "garamond">
+        <p><ddkHading>
+        <!--Кратко о странице-->
            A brief description of the main characters of the historical novel 
            in the poems of Alexander Sergeevich Pushkin "Eugene Onegin". 
-        </ddk></p>
+        </ddkHading></p>
         <p>
         ___________________________________________________________________________________________________________________________________________________</p>
-
 <div class="row"></ddk>
+        <!--Информация о персонаже-->
     <div class="col-md-6">
         <center>
+        <!--Вставка изображения-->
         <img src = "static\images\img_Characters\Onegin.jpg">
         <p></p>
         </center>
@@ -22,8 +24,10 @@
         </p>
         </ddk>
     </div>
+        <!--Информация о персонаже-->
     <div class="col-md-6">
         <center>
+        <!--Вставка изображения-->
         <img src = "static\images\img_Characters\Lenski.jpg">
         <p></p>
         </center>
@@ -36,8 +40,10 @@
     </div>
 </ddk></div>
 <div class="row"><ddk>
+        <!--Информация о персонаже-->
     <div class="col-md-6">
         <center>
+        <!--Вставка изображения-->
         <img src = "static\images\img_Characters\Tatyana.jpg">
         <p></p>
         </center>
@@ -49,8 +55,10 @@
         </p>
         </ddk>
     </div>
+        <!--Информация о персонаже-->
     <div class="col-md-6">
         <center>
+        <!--Вставка изображения-->
         <img src = "static\images\img_Characters\Olga.jpg">
         <p></p>
         </center>
