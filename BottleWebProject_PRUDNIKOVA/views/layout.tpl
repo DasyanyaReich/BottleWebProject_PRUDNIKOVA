@@ -24,7 +24,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="/home">Home</a></li>
                     <li><a href="/about">Short contect</a></li>
-                    <li><a href="/contact">Characters</a></li>
+                    <li><a href="/characters">Characters</a></li>
                 </ul>
             </div>
         </div>
