@@ -8,11 +8,10 @@ def my_form():
     if text:
        return "Thanks! The answer will be sent to the mail %s" % mail
     else:
-       return "Error"
-    #email = mail
-    #email = re.compile(r"([-!#-'*+/-9=?A-Z^-~]+(\.[-!#-'*+/-9=?A-Z^-~]+)*|\"([]!#-[^-~ \t]|(\\[\t -~]))+\")@([-!#-'*+/-9=?A-Z^-~]+(\.[-!#-'*+/-9=?A-Z^-~]+)*|\[[\t -Z^-~]*])")
-    #if email:
-     #  return "Thanks! The answer will be sent to the mail %s" % mail
-    #else:
-     #  return "Error"
+       return "Error message"
+    regex = re.compile(r"([-!#-'*+/-9=?A-Z^-~]+(\.[-!#-'*+/-9=?A-Z^-~]+)*|\"([]!#-[^-~ \t]|(\\[\t -~]))+\")@([-!#-'*+/-9=?A-Z^-~]+(\.[-!#-'*+/-9=?A-Z^-~]+)*|\[[\t -Z^-~]*])")
+    if re.fullmatch(regex, mail):
+        return "Thanks! The answer will be sent to the mail %s" % mail
+    else:
+         return "Error mail adress"
    
