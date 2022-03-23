@@ -80,7 +80,7 @@ The composition is a poetic novel consisting of eight chapters.</ddk></p>
         <h2><strong><ddkHading>Result</ddkHading></strong></h2>
     <p><ddk>Summing up the analysis of the work in Eugene Onegin, we can highlight the essence of the novel: a person who is spiritually devastated falls under the influence of society, not striving for self-affirmation. Analyzing the work "Eugene Onegin", we come to the conclusion that the conflict between man and society is subordinated to the fact that a common force suppresses and destroys one individual if he does not go to resistance against the system.</ddk></p>
     <p><ddk>It always remains relevant what this work teaches - the ability to make your own choice and live a full life.</ddk></p>
-    <h3> Ask a Question </h3>
+    <h3><ddk> Ask a Question </ddk></h3>
 
 <!DOCTYPE html>
 <html>
@@ -90,12 +90,12 @@ The composition is a poetic novel consisting of eight chapters.</ddk></p>
     <style>
       #okno {
         width: 300px;
-        height: 50px;
+        height: 150px;
         text-align: center;
         padding: 15px;
-        border: 3px solid #0000cc;
+        border: 3px solid #3d2b1f;
         border-radius: 10px;
-        color: #0000cc;
+        color: #cc7722;
         display: none;
       }
       #okno:target {display: block;}
@@ -105,18 +105,20 @@ The composition is a poetic novel consisting of eight chapters.</ddk></p>
   <body>
    
     <div id="okno">
-      Всплывающее окошко!
+      You can write your question here about the information posted on our website by specifying your email address. We will try to send an answer to your question as soon as possible
     </div>
      
-    <a href="#okno"> jjjj</a>
+    <a href="#okno"> <ddk>More detailed</ddk></a>
  
   </body>
 </html>
 
 <form action="/home" method="post">
-        <p><textarea rows="2" cols="50" name="QUEST" placeholder="Your question"></textarea></p> 
-        <p><input type="text" size="50" name="ADRESS" placeholder="Your email"></p>
-        <p class="btn btn-default".> <input type="submit" value="Send"></p>
+    
+        <p><ddk><textarea rows="2" cols="50" name="QUEST" placeholder="Your question"required></textarea></ddk></p> 
+        <p><ddk><input type="text" size="50" name="ADRESS" placeholder="Your email" required></ddk></p>
+        <p><a class="btn btn-warning btn-lg"><input type="submit" value="Send"></a></p>
+
 </form>
 
     </div>

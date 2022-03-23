@@ -13,6 +13,20 @@ ddkHading {
     font-family: colonna mt;
     font-weight: bold;
 }
+
+ddk1 {
+    font-size: 25px;
+    font-family: garamond;
+    background-color: #cc7722;
+}
+
+input:required {
+    background-color: #faf0be;
+    color: #000000;
+}
+
+
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -24,6 +38,7 @@ input,
 select,
 textarea {
     max-width: 280px;
+    background-color: #faf0be;
 }
 
 /* styles for validation helpers */
