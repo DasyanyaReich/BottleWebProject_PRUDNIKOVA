@@ -81,6 +81,38 @@ The composition is a poetic novel consisting of eight chapters.</ddk></p>
     <p><ddk>Summing up the analysis of the work in Eugene Onegin, we can highlight the essence of the novel: a person who is spiritually devastated falls under the influence of society, not striving for self-affirmation. Analyzing the work "Eugene Onegin", we come to the conclusion that the conflict between man and society is subordinated to the fact that a common force suppresses and destroys one individual if he does not go to resistance against the system.</ddk></p>
     <p><ddk>It always remains relevant what this work teaches - the ability to make your own choice and live a full life.</ddk></p>
     <h3> Ask a Question </h3>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Название документа</title>
+    <style>
+      #okno {
+        width: 300px;
+        height: 50px;
+        text-align: center;
+        padding: 15px;
+        border: 3px solid #0000cc;
+        border-radius: 10px;
+        color: #0000cc;
+        display: none;
+      }
+      #okno:target {display: block;}
+    </style>
+  </head>
+ 
+  <body>
+   
+    <div id="okno">
+      Всплывающее окошко!
+    </div>
+     
+    <a href="#okno"> jjjj</a>
+ 
+  </body>
+</html>
+
 <form action="/home" method="post">
         <p><textarea rows="2" cols="50" name="QUEST" placeholder="Your question"></textarea></p> 
         <p><input type="text" size="50" name="ADRESS" placeholder="Your email"></p>
