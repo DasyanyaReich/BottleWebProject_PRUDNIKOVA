@@ -1,14 +1,14 @@
+#Подключение методов для отправки HTTP запросов
 from bottle import post, request
-import re
+
 
 @post('/home', method='post')
 def my_form():
+    #присвоение переменной значение поля адреса
     mail = request.forms.get('ADRESS')
-    text = request.forms.get('QUEST')
-    regex = re.compile(r"([-!#-'*+/-9=?A-Z^-~]+(\.[-!#-'*+/-9=?A-Z^-~]+)*|\"([]!#-[^-~ \t]|(\\[\t -~]))+\")@([-!#-'*+/-9=?A-Z^-~]+(\.[-!#-'*+/-9=?A-Z^-~]+)*|\[[\t -Z^-~]*])")
-    if re.fullmatch(regex, mail):
+    #text = request.forms.get('QUEST')
+    #regex = re.compile(r'([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+')
+    if mail:
         return "Thanks! The answer will be sent to the mail %s " % mail
-    else:
-         return "Error mail adress"
    
 

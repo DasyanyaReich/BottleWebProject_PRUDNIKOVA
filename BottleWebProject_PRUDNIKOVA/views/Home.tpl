@@ -86,9 +86,9 @@ The composition is a poetic novel consisting of eight chapters.</ddk></p>
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Название документа</title>
+    <title>Name</title>
     <style>
-      #okno {
+      #window {
         width: 300px;
         height: 150px;
         text-align: center;
@@ -98,17 +98,17 @@ The composition is a poetic novel consisting of eight chapters.</ddk></p>
         color: #cc7722;
         display: none;
       }
-      #okno:target {display: block;}
+      #window:target {display: block;}
     </style>
   </head>
  
   <body>
    
-    <div id="okno">
+    <div id="window">
       You can write your question here about the information posted on our website by specifying your email address. We will try to send an answer to your question as soon as possible
     </div>
      
-    <a href="#okno"> <ddk>More detailed</ddk></a>
+    <a href="#window"> <ddk>More detailed</ddk></a>
  
   </body>
 </html>
@@ -116,8 +116,8 @@ The composition is a poetic novel consisting of eight chapters.</ddk></p>
 <form action="/home" method="post">
     
         <p><ddk><textarea rows="2" cols="50" name="QUEST" placeholder="Your question"required></textarea></ddk></p> 
-        <p><ddk><input type="text" size="50" name="ADRESS" placeholder="Your email" required></ddk></p>
-        <p><a class="btn btn-warning btn-lg"><input type="submit" value="Send"></a></p>
+        <p><ddk><input type="text" size="50" name="ADRESS" placeholder="Your email" pattern="([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+" required></ddk></p>
+        <p><input type="submit" value="Send" class="btn btn-default" required></a></p>
 
 </form>
 

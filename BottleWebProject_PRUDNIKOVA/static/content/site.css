@@ -23,6 +23,7 @@ ddk1 {
 input:required {
     background-color: #faf0be;
     color: #000000;
+    border-width: 3px
 }
 
 
