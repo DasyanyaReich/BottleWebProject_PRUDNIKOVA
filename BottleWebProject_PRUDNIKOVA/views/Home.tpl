@@ -115,7 +115,7 @@ The composition is a poetic novel consisting of eight chapters.</ddk></p>
 
 <form action="/home" method="post">
     
-        <p><ddk><textarea rows="2" cols="50" name="QUEST" placeholder="Your question"required></textarea></ddk></p> 
+        <p><ddk><textarea rows="2" onkeyup="this.value = this.value.replace(/[|]/g,'');" cols="50" name="QUEST" placeholder="Your question"required></textarea></ddk></p> 
         <p><ddk><input type="text" size="50" name="ADRESS" placeholder="Your email" pattern="([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+" required></ddk></p>
         <p><input type="submit" value="Send" class="btn btn-default" required></a></p>
 
