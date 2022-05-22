@@ -80,7 +80,15 @@ The composition is a poetic novel consisting of eight chapters.</ddk></p>
         <h2><strong><ddkHading>Result</ddkHading></strong></h2>
     <p><ddk>Summing up the analysis of the work in Eugene Onegin, we can highlight the essence of the novel: a person who is spiritually devastated falls under the influence of society, not striving for self-affirmation. Analyzing the work "Eugene Onegin", we come to the conclusion that the conflict between man and society is subordinated to the fact that a common force suppresses and destroys one individual if he does not go to resistance against the system.</ddk></p>
     <p><ddk>It always remains relevant what this work teaches - the ability to make your own choice and live a full life.</ddk></p>
+    
+  
+
+
+
+
     <h3><ddk> Ask a Question </ddk></h3>
+
+
 
 <!DOCTYPE html>
 <html>
@@ -102,6 +110,7 @@ The composition is a poetic novel consisting of eight chapters.</ddk></p>
     </style>
   </head>
  
+
   <body>
    
     <div id="window">
@@ -117,10 +126,12 @@ The composition is a poetic novel consisting of eight chapters.</ddk></p>
     
         <p><ddk><textarea rows="2" onkeyup="this.value = this.value.replace(/[|]/g,'');" cols="50" name="QUEST" placeholder="Your question"required></textarea></ddk></p> 
         <p><ddk><input type="text" size="50" name="ADRESS" placeholder="Your email" pattern="([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+" required></ddk></p>
-        <p><input type="submit" value="Send" class="btn btn-default" required></a></p>
+        <p><input type="submit" value="Send" class="btn btn-warning btn-lg" required></a></p>
+        <p><input type="reset" value="Clear Fields" class="btn btn-warning btn-lg" required></a></p>
 
 </form>
-
+<div class="row">
+       <h2><ddkHading>Go to the section with the latest news</ddkHading></h2>
+      <p><a class="btn btn-warning btn-lg" href="/Current_novelties">Learn more &raquo;</a></p>
     </div>
-
 

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ProfilingTarget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProjectTarget>
+    <TargetProject>80ce3726-76a1-474a-970a-8ef9d917a0b1</TargetProject>
+    <FriendlyName>BottleWebProject_PRUDNIKOVA</FriendlyName>
+  </ProjectTarget>
+  <Reports>
+    <Report>
+      <Filename>C:\Users\79650\AppData\Local\Temp\BottleWebProject_PRUDNIKOVA1_20220421.vsp</Filename>
+    </Report>
+  </Reports>
+  <UseVTune>false</UseVTune>
+</ProfilingTarget>
