@@ -30,11 +30,14 @@ def my_form():
     name = request.forms.get('Name')
     text = request.forms.get('QUEST')
     date = request.forms.get('example_date')
-    list1.append(date)
+    time = request.forms.get('TIME')
+    list1.append(time)
     list1.append(nik)
     list1.append(name)
     list1.append(text)
-    with open('D:\Spisok.txt', 'a') as outfile:
-       json.dump(list1, outfile)
-       outfile.write('\n')
-    return "Thanks! The answer will be sent to the mail %s "
+    my_file = open("D:\Spisok.txt", "a")
+    my_file.seek(0)
+    my_file.write(str(list1))
+    my_file.write('\n')
+    my_file.close()
+    return "Thanks! Your article will be published on our website "

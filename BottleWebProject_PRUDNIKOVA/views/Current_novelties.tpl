@@ -6,6 +6,11 @@
 <div class="col-md-5">
     <h2><strong><ddkHading>Current novelties</ddkHading></strong></h2>
     <p class="lead"><ddk>On this page you can read the latest news of our site, as well as write your information</ddk></p>
+    
+
+
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -39,8 +44,16 @@
 
 <form action="/Current_novelties" method="post">
         <p><ddk><input type="text" size="50" name="Nik" placeholder="Your Nik" required></ddk></p>
-        <p><ddk><input type="text" size="50" name="Name" placeholder="Your " required></ddk></p>
+        <p><ddk><input type="text" size="50" name="Name" placeholder="Your Text Name" required></ddk></p>
         <p><ddk><textarea rows="10" onkeyup="this.value = this.value.replace(/[|]/g,'');" cols="50" name="QUEST" placeholder="Your text"required></textarea></ddk></p> 
-        <input name="example_datetime" type="datetime-local" />
+        <p class="lead"><ddk>On this page you can read the latest news of our site, as well as write your information</ddk></p>
+        <div id="current_date_time_block2"></div>
+        <p id="time" name="TIME"></p>
+        <script type="text/javascript">
+            var time = setInterval(function() {
+                var date = new Date();
+                document.getElementById("time").innerHTML = (date.getFullYear() + "-"+ date.getMonth() + "-"+ date.getDate() + " "+ date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds());
+            }, 1000);
+        </script>
         <p><input type="submit" value="Send" class="btn btn-warning btn-lg" required></a></p>
 </form>
