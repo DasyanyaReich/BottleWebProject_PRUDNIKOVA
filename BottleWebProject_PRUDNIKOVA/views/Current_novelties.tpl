@@ -37,11 +37,10 @@
   </body>
 </html>
 
-<form action="/home" method="post2">
+<form action="/Current_novelties" method="post">
         <p><ddk><input type="text" size="50" name="Nik" placeholder="Your Nik" required></ddk></p>
         <p><ddk><input type="text" size="50" name="Name" placeholder="Your " required></ddk></p>
         <p><ddk><textarea rows="10" onkeyup="this.value = this.value.replace(/[|]/g,'');" cols="50" name="QUEST" placeholder="Your text"required></textarea></ddk></p> 
+        <input name="example_datetime" type="datetime-local" />
         <p><input type="submit" value="Send" class="btn btn-warning btn-lg" required></a></p>
-        <input name="example_date" type="date" />
-
 </form>

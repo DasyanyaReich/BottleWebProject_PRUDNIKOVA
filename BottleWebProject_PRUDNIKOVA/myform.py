@@ -22,17 +22,19 @@ def my_form():
        json.dump(questions, outfile)
     return "Thanks! The answer will be sent to the mail %s " % mail
 
-@post('/home', method='post2')
+@post('/Current_novelties', method='post')
 def my_form():
-    ilst1 =[]
+    list1 =[]
     #присвоение переменной значение поля адреса
-    nik = request.forms.get('ADRESS')
-    name = request.forms.get('ADRESS')
-    text = request.forms.get('ADRESS')
+    nik = request.forms.get('Nik')
+    name = request.forms.get('Name')
+    text = request.forms.get('QUEST')
     date = request.forms.get('example_date')
+    list1.append(date)
     list1.append(nik)
     list1.append(name)
     list1.append(text)
     with open('D:\Spisok.txt', 'a') as outfile:
        json.dump(list1, outfile)
-    return template('Home')
+       outfile.write('\n')
+    return "Thanks! The answer will be sent to the mail %s "
