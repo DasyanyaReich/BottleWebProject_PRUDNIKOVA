@@ -10,10 +10,15 @@
 <div class="col-md-10">
     <!--Generating a table-->
         <form action="/Row" method="post">
-            %for number in range(4):
-                <input type = "number" name = "el1" placeholder= "10" value ="1" min="1" pattern="(^[ 0-9]+$)+" required>
-                <input type = "text" name = "el2" placeholder= "100" value ="1" pattern="[^0]{1}[0-9]{0,}" required>
-            %end
+        %a= 0
+        %list = []
+        %num_lines = sum(1 for line in open('D:\Spisok.txt'))
+        %file1 = open("D:\Spisok.txt", "r")
+        %while a< num_lines :
+            %a = 1
+            %list = file1.readline(a)
+            <p><ddk>{{list[a]}}</ddk></p>
+        %file1.close
         <div class="avd_div"><p align = "left"><input type="submit" value="Send" class="bucn_2_z" required></p></div>
             
         </form>

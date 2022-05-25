@@ -37,10 +37,9 @@ def my_form():
     list1.append(text)
     my_file = open("D:\Spisok.txt", "a")
     my_file.seek(0)
-    my_file.write(str(nik))
-    my_file.write(str(name))
-    my_file.write(str(text))
-    my_file.write(str(time))
+    my_file.write(nik)
+    my_file.write(name)
+    my_file.write(text)
     my_file.write('\n')
     my_file.close()
     return "Thanks! Your article will be published on our website "
