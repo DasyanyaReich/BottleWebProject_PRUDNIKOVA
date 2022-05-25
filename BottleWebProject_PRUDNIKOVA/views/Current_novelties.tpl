@@ -1,22 +1,22 @@
 % rebase('layout.tpl', title='Evgenij Onegin', year=year)
 <!--Вставка начальной картинки--> 
-<div class="col-md-5">
-    <img src="static\images\img_SummaryOfWork\i.png"> 
-</div>
-<div class="col-md-5">
+
+<div class="col-md-10">
     <h2><strong><ddkHading>Current novelties</ddkHading></strong></h2>
     <p class="lead"><ddk>On this page you can read the latest news of our site, as well as write your information</ddk></p>
 
 <div class="col-md-10">
     <!--Generating a table-->
         <form action="/Row" method="post">
-        %f = open("D:\S.txt", "r")
-        %g = f.read()
-        %zp_list = g.split(" ")
-        %print(zp_list) # смотрим получившийся список
-        %for name in zp_list: # в конце основного блока цикла всегда ставится двоеточие ":"
-            <p><ddk>{{name}}</ddk></p>
-        %end
+        %filehandle = open("D:\Spisok.txt", "r")
+        %a= 0
+        %while True:  
+            %line = filehandle.readline()
+            %if not line:
+                %break
+            %else:
+                <p><ddk>{{line}}</ddk></p>
+        %filehandle.close()  
 
             
         </form>
