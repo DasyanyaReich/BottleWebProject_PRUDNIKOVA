@@ -10,16 +10,14 @@
 <div class="col-md-10">
     <!--Generating a table-->
         <form action="/Row" method="post">
-        %a= 0
-        %list = []
-        %num_lines = sum(1 for line in open('D:\Spisok.txt'))
-        %file1 = open("D:\Spisok.txt", "r")
-        %while a< num_lines :
-            %a = 1
-            %list = file1.readline(a)
-            <p><ddk>{{list[a]}}</ddk></p>
-        %file1.close
-        <div class="avd_div"><p align = "left"><input type="submit" value="Send" class="bucn_2_z" required></p></div>
+        %f = open("D:\S.txt", "r")
+        %g = f.read()
+        %zp_list = g.split(" ")
+        %print(zp_list) # смотрим получившийся список
+        %for name in zp_list: # в конце основного блока цикла всегда ставится двоеточие ":"
+            <p><ddk>{{name}}</ddk></p>
+        %end
+
             
         </form>
     </div>
