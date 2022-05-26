@@ -75,6 +75,8 @@
     <Content Include="views\Current_novelties.tpl" />
     <Content Include="views\Home.tpl" />
     <Content Include="views\layout.tpl" />
+    <Content Include="views\Reviews.tpl" />
+    <Content Include="views\Short.tpl" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">
