@@ -24,24 +24,11 @@ def my_form():
 
 @post('/Current_novelties', method='post')
 def my_form():
-    list1 =[]
-    #присвоение переменной значение поля адреса
     nik = request.forms.get('Nik')
     name = request.forms.get('Name')
     text = request.forms.get('QUEST')
     date = request.forms.get('example_date')
     time = request.forms.get('TIME')
-    list1.append(time)
-    list1.append(nik)
-    list1.append(name)
-    list1.append(text)
-    my_file = open("D:\Spisok.txt", "a")
-    my_file.seek(0)
-    my_file.write(nik)
-    my_file.write('\n')
-    my_file.write(name)
-    my_file.write('\n')
-    my_file.write(text)
-    my_file.write('\n')
-    my_file.close()
-    return "Thanks! Your article will be published on our website "
+
+    data =[]
+    data1 = [nik, name, text, time]
