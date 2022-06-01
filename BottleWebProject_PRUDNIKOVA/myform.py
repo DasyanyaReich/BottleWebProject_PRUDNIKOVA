@@ -1,7 +1,7 @@
 #Подключение методов для отправки HTTP запросов
 import pdb
-import json
-from bottle import post, request, template, route
+import json, datetime
+from bottle import post, request, template, route, view
 
 
 @post('/home', method='post')
@@ -23,12 +23,42 @@ def my_form():
     return "Thanks! The answer will be sent to the mail %s " % mail
 
 @post('/Current_novelties', method='post')
-def my_form():
-    nik = request.forms.get('Nik')
-    name = request.forms.get('Name')
-    text = request.forms.get('QUEST')
-    date = request.forms.get('example_date')
-    time = request.forms.get('TIME')
+@view('Current_novelties')
+def review_form():
+    mail = request.forms.get('MAIL')
+    phone = request.forms.get('PHONE')
+    review = request.forms.get('REVIEW')
+    date = datetime.datetime.now()
+    reviews = []
+    try:
+        with open('reviews.txt',encoding='latin1') as json_file:
+            reviews = json.load(json_file)
+    except:
+        pass
 
-    data =[]
-    data1 = [nik, name, text, time]
+    # Проверка почты на наличие в текстовом файле JSON
+    flag = 1
+    # Если в текстовом файле уже имеются данные ->
+    if len(reviews) != 0:
+        # Если в одном из отывов почта совпадает, то записать новый отзыв в имеющийся список
+        for rev in reviews:
+            if mail == rev['mail']:
+                rev['phone'] = phone
+                rev['date'].append(date.strftime("%x"))
+                flag = 0
+        # Иначе добавить к существующим словарям новый словарь с отзывом
+        if flag == 1:
+            reviews.append({'mail': mail, 'phone': phone, 'date': [date.strftime("%x")], 'review': [review]})
+    # Иначе сделать новый словарь с отзывом
+    else:
+        reviews.append({'mail': mail, 'phone': phone, 'date': [date.strftime("%x")], 'review': [review]})
+    
+    # Записать в файл данные
+    with open('reviews.txt', 'w',encoding='latin1') as outfile:
+        json.dump(reviews, outfile)
+
+    # Отобразить страницу с отзывами
+    return dict(
+        title='Current_novelties',
+        year=datetime.datetime.now().year
+    )

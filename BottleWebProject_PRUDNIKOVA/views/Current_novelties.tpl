@@ -1,4 +1,5 @@
-% rebase('layout.tpl', title='Evgenij Onegin', year=year)
+% rebase('layout.tpl', year=year)
+
 <!--Вставка начальной картинки--> 
 
 <div class="col-md-10">
@@ -6,8 +7,7 @@
     <p class="lead"><ddk>On this page you can read the latest news of our site, as well as write your information</ddk></p>
 
 
-    
-            
+
 
 
 <!DOCTYPE html>
@@ -40,47 +40,64 @@
  
   </body>
 </html>
+% import json
+<header_char>
+    <!-- Заголовок -->
+	<head>
+		<h1>Отзывы</h1>
+        <meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="/static/content/site.css" />
+	</head>
+	<body id = back1>
+		<!-- Основная рабочая форма с заполнением отзывов -->
+		<form id="Current_novelties">
+			<h3> Оставьте свой отзыв! </h3>
+			<p><textarea input type="text" rows="3" cols="100" name="REVIEW" placeholder="Здесь вы можете оставить свой отзыв..." id="review"></textarea></p> 
+			<p><input type="text" name="MAIL" placeholder="Введите почту..." id="mail" 
+			pattern="^[a-zA-Z0-9_.+-]+@[a-z]+.[a-z]{2,3}$" title="Введите почту в указанном формате - test@mail.ru"></p>
+			<p><input type="text" name="PHONE" placeholder="Введите номер телефона..." id="phone" 
+			pattern="^[+]\d[(]\d{3}[)]\d{3}[-]\d{2}[-]\d{2}$" title="Введите номер телефона в указанном формате - +#(###)###-##-##"></p>
+			<p>Если в списке отзывов уже имеется ваша электронная почта, то номер телефона будет изменен на новый</p>
+			<p><input type="submit" value="Отправить" class="btn btn-default" id="btn" onclick="rev_btn()"></p>
+		</form>
 
-<form action="/Current_novelties" method="post">
-        <p><ddk><input type="text" size="50" name="Nik" placeholder="Your Nik" required></ddk></p>
-        <p><ddk><input type="text" size="50" name="Name" placeholder="Your Text Name" required></ddk></p>
-        <p><ddk><textarea rows="10" onkeyup="this.value = this.value.replace(/[|]/g,'');" cols="50" name="QUEST" placeholder="Your text"required></textarea></ddk></p> 
-        <div id="current_date_time_block2"></div>
-        <p id="time" name="TIME"></p>
-        <script type="text/javascript">
-            var time = setInterval(function() {
-                var date = new Date();
-                document.getElementById("time").innerHTML = (date.getFullYear() + "-"+ date.getMonth() + "-"+ date.getDate() + " "+ date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds());
-            }, 1000);
-        </script>
-        <p><input type="submit" value="Send" class="btn btn-warning btn-lg" required></a></p>
-</form>
+		<!-- Отображение чужих отзывов -->
+		<br /><br /><br />
+		<h3> Отзывы других пользователей: </h3>
+		<% reviews = [] %>
+		<% try: %>
+		<% with open('reviews.txt',encoding='latin1') as json_file: %>
+			<% reviews = json.load(json_file) %>
+		<% end %>
+		<% except: %>
+		<% pass %>
+		<% end %>
+		<% if len(reviews) > 0: %>
+			<% for i in range(len(reviews)): %>
+				<% c = len(reviews) - i -1 %>
+				<% user_reviews = reviews[c]['review'] %>
+				<% date_of_reviews = reviews[c]['date'] %>
 
-<div class="col-md-10">
-    <!--Generating a table-->
-        <form action="/Row" method="post">
-            %import json
-            %data = []
-            %with open ('g1.json') as jsonFile:
-                %data = json.load(jsonFile)
+				<form id="form_reviews_{{c+1}}">
+					<h2>{{reviews[c]['mail']}}</h2>
+					<h3>{{reviews[c]['phone']}}</h3>
 
-            %data.reverse()
-            %for i in range(len(data)):
-            <bodyTextAu>
-                 <conteinerS>
-                      <separateS>
-                           <b>
-                                {{(data[i])[2]}} {{(data[i])[1]}}
-                           </b>
-                      </separateS>
-                      <separateS>
-                        <b>
-                             {{(data[i])[5]}}
-                        </b>
-                        </separateS>
-                 </conteinerS>
-            </bodyTextAu>
-     <hr>
-%end
-        </form>
-    </div>
+						<ol>
+							<% for j in range(len(user_reviews)): %>
+								<p> {{user_reviews[j]}}</p>
+								<p>{{date_of_reviews[j]}}</p>
+							<% end %>
+						</ol>
+				</form>
+			<% end %>
+		<% end %>
+	</body>
+
+	<script>
+		// Функция проверки заполнения формы
+		function rev_btn() {
+			document.getElementById("Current_novelties").action = "/Current_novelties";
+			document.getElementById("Current_novelties").method = "post";	
+		}
+	</script>
+</header_char>
