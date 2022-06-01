@@ -7,6 +7,7 @@ import os
 import sys
 import News
 import user_review
+import activeUsers
 
 # routes contains the HTTP handlers for our server and must be imported.
 import routes
