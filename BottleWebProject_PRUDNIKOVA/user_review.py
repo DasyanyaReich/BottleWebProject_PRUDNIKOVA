@@ -11,7 +11,7 @@ def review_form():
     date = datetime.datetime.now()
     reviews = []
     try:
-        with open('reviews.txt',encoding='latin1') as json_file:
+        with open('D:/reviews.txt',encoding='latin1') as json_file:
             reviews = json.load(json_file)
     except:
         pass
@@ -28,7 +28,7 @@ def review_form():
         reviews.append({'Nickname': Nickname, 'Date': Date, 'review': [review]})
     
     # Записать в файл данные
-    with open('reviews.txt', 'w',encoding='latin1') as outfile:
+    with open('D:/reviews.txt', 'w',encoding='latin1') as outfile:
         json.dump(reviews, outfile)
 
     # Отобразить страницу с отзывами

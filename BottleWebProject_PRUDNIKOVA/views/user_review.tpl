@@ -3,34 +3,32 @@
 <!--Вставка начальной картинки--> 
 
 <div class="col-md-10">
-    <h2><strong><ddkHading>Reviews</ddkHading></strong></h2>
-    <p class="lead"><ddk>Here you can read and post a review about our website</ddk></p>
+    
 </div>
 
 
 <header_char>
     <!-- Заголовок -->
 	<head>
-		<h1>Отзывы</h1>
-        <meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="/static/content/site.css" />
+		<h2><strong><ddkHading>Reviews</ddkHading></strong></h2>
+		<p class="lead"><ddk>Here you can read and post a review about our website</ddk></p>
 	</head>
 	<body id = back1>
 		<!-- Основная рабочая форма с заполнением отзывов -->
 		<form id="form_user_review">
 			<h3> Leave your feedback! </h3>
 			<p><textarea input type="text" rows="3" cols="100" name="REVIEW" placeholder="Here you can leave your feedback..." id="review"></textarea></p> 
-			<p><input type="text" name="Nickname" placeholder="Введите Ник..." id="Nickname" title="Enter your nickname"></p>
+			<p><input type="text" name="Nickname" placeholder="Enter your nickname" id="Nickname" ></p>
 			<p><input type="date" name="Date" placeholder="Enter the date when the review was sent..." id="Date"></p>
-			<p><input type="submit" value="Отправить" class="btn btn-default" id="btn" onclick="rev_btn()"></p>
+			<p><input type="submit" value="Send" class="btn btn-default" id="btn" onclick="rev_btn()"></p>
 		</form>
 
 		<!-- Отображение чужих отзывов -->
 		<br /><br /><br />
-		<h3> Отзывы других пользователей: </h3>
+		<h3> Reviews of other users: </h3>
 		<% reviews = [] %>
 		<% try: %>
-		<% with open('reviews.txt',encoding='latin1') as json_file: %>
+		<% with open('D:/reviews.txt',encoding='latin1') as json_file: %>
 			<% reviews = json.load(json_file) %>
 		<% end %>
 		<% except: %>
