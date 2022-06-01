@@ -32,11 +32,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.py" />
+    <Compile Include="Reviews.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="News.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="routes.py" />
-    <Compile Include="myform.py">
+    <Compile Include="user_review.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -75,7 +78,7 @@
     <Content Include="views\Current_novelties.tpl" />
     <Content Include="views\Home.tpl" />
     <Content Include="views\layout.tpl" />
-    <Content Include="views\Reviews.tpl" />
+    <Content Include="views\user_review.tpl" />
     <Content Include="views\Short.tpl" />
   </ItemGroup>
   <ItemGroup>

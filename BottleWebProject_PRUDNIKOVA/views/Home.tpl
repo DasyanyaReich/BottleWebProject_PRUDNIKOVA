@@ -7,7 +7,6 @@
 <div class="col-md-5">
     <h2><strong><ddkHading>Summary of work "Eugene Onegin" Alexander Pushkin</ddkHading></strong></h2>
     <p class="lead"><ddk>Brief analysis, history of creation, place and time of action, content, genre, results of the work</ddk></p>
-
 </div>
 <!--Вставка раздела "О работе"--> 
 <div class="row">
@@ -22,7 +21,7 @@
     <ddk>Alexander Sergeyevich Pushkin</ddk>
 </div>
 <!--Вставка раздела "Краткий анализ"--> 
-<div class="row">
+<div class="row"> 
     <div class="col-md-10">
         <h2><ddkHading>Brief analysis</ddkHading></strong></h2>
         <p><ddk>
