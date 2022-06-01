@@ -53,3 +53,12 @@ def contact():
         message='Your contact page.',
         year=datetime.now().year
     )
+@route('/activeUsers')
+@view('activeUsers')
+def activeUsers():
+    """Renders the contact page."""
+    return dict(
+        title='Activity users',
+        message='Your contact page.',
+        year=datetime.now().year
+    )

@@ -32,7 +32,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.py" />
+    <Compile Include="checkPhone.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="News.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="activeUsers.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="routes.py" />
@@ -48,6 +54,7 @@
     <Folder Include="views\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="activeUserFile.json" />
     <Content Include="requirements.txt" />
     <Content Include="static\content\bootstrap.css" />
     <Content Include="static\content\bootstrap.min.css" />
@@ -71,6 +78,7 @@
     <Content Include="static\scripts\respond.js" />
     <Content Include="static\scripts\respond.min.js" />
     <Content Include="static\scripts\_references.js" />
+    <Content Include="views\activeUsers.tpl" />
     <Content Include="views\Characters.tpl" />
     <Content Include="views\Current_novelties.tpl" />
     <Content Include="views\Home.tpl" />
