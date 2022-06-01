@@ -25,6 +25,7 @@
                     <li><a href="/home">Home</a></li>
                     <li><a href="/Short">Short contect</a></li>
                     <li><a href="/Characters">Characters</a></li>
+                    <li><a href="/user_review">Reviews</a></li>
                 </ul>
             </div>
         </div>
