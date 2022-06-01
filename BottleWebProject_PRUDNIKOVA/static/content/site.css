@@ -19,7 +19,10 @@ ddk1 {
     font-family: garamond;
     background-color: #cc7722;
 }
-
+ddk2 {
+    font-size: 35px;
+    font-family: garamond;
+}
 input:required {
     background-color: #faf0be;
     color: #000000;

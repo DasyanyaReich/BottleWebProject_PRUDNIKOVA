@@ -32,6 +32,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.py" />
+    <Compile Include="Current_novelties.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="myform.py" />
     <Compile Include="Reviews.py">
       <SubType>Code</SubType>
     </Compile>

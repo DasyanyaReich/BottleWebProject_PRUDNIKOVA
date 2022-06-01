@@ -1,9 +1,10 @@
 % rebase('layout.tpl', year=year)
+% import json, datetime
 
 <!--Вставка начальной картинки--> 
 
 <div class="col-md-10">
-    <h2><strong><ddkHading>Current novelties</ddkHading></strong></h2>
+    <h2 align="center"><strong><ddkHading>Current novelties</ddkHading></strong></h2>
     <p class="lead"><ddk>On this page you can read the latest news of our site, as well as write your information</ddk></p>
 
 
@@ -40,64 +41,50 @@
  
   </body>
 </html>
-% import json
-<header_char>
+
+<form action="/Current_novelties" method="post">
     <!-- Заголовок -->
-	<head>
-		<h1>Отзывы</h1>
-        <meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="/static/content/site.css" />
-	</head>
 	<body id = back1>
 		<!-- Основная рабочая форма с заполнением отзывов -->
 		<form id="Current_novelties">
-			<h3> Оставьте свой отзыв! </h3>
-			<p><textarea input type="text" rows="3" cols="100" name="REVIEW" placeholder="Здесь вы можете оставить свой отзыв..." id="review"></textarea></p> 
-			<p><input type="text" name="MAIL" placeholder="Введите почту..." id="mail" 
-			pattern="^[a-zA-Z0-9_.+-]+@[a-z]+.[a-z]{2,3}$" title="Введите почту в указанном формате - test@mail.ru"></p>
-			<p><input type="text" name="PHONE" placeholder="Введите номер телефона..." id="phone" 
-			pattern="^[+]\d[(]\d{3}[)]\d{3}[-]\d{2}[-]\d{2}$" title="Введите номер телефона в указанном формате - +#(###)###-##-##"></p>
-			<p>Если в списке отзывов уже имеется ваша электронная почта, то номер телефона будет изменен на новый</p>
-			<p><input type="submit" value="Отправить" class="btn btn-default" id="btn" onclick="rev_btn()"></p>
+			<h3><ddkHading> Write your current article </ddkHading></h3>
+			<p><ddk><input type="text" name="NIK" placeholder="Enter your nik" id="nik" pattern="([A-Za-z0-9]{7,})+" title="The nickname must consist of at least 7 characters" required></ddk></p>
+			<p><ddk><input type="text" name="PHONE" placeholder="Enter the phone number" id="phone" 
+			pattern="^[+]\d[(]\d{3}[)]\d{3}[-]\d{2}[-]\d{2}$" title="Enter the phone number in the specified format - +#(###)###-##-##" required></ddk></p>
+			<p><ddk><input type="text" rows="3" cols="100" name="Name_article" placeholder="Name current article" id="Name_article" pattern="([A-Za-z0-9]{7,})+" title="The Name current article must consist of at least 7 characters" required></ddk></p> 
+			<p><ddk><textarea input type="text" rows="10" cols="100" name="Current_article" placeholder="The text of the article" id="review" required></textarea></ddk></p> 
+			<p><input type="submit" value="Send" class="btn btn-warning btn-lg" required></a></p>
 		</form>
 
 		<!-- Отображение чужих отзывов -->
 		<br /><br /><br />
-		<h3> Отзывы других пользователей: </h3>
-		<% reviews = [] %>
+		<h3><ddkHading> Articles by other users:</ddkHading> </h3>
+		<% article = [] %>
 		<% try: %>
-		<% with open('reviews.txt',encoding='latin1') as json_file: %>
-			<% reviews = json.load(json_file) %>
+		<% with open('article.txt') as json_file: %>
+			<% article = json.load(json_file) %>
 		<% end %>
 		<% except: %>
 		<% pass %>
 		<% end %>
-		<% if len(reviews) > 0: %>
-			<% for i in range(len(reviews)): %>
-				<% c = len(reviews) - i -1 %>
-				<% user_reviews = reviews[c]['review'] %>
-				<% date_of_reviews = reviews[c]['date'] %>
+		<% if len(article) > 0: %>
+			<% for i in range(len(article)): %>
+				<% c = len(article) - i -1 %>
+				<% Name_article = article[c]['Name_article'] %>
+				<% user_reviews = article[c]['current_article'] %>
+				<% date_of_reviews = article[c]['date'] %>
 
-				<form id="form_reviews_{{c+1}}">
-					<h2>{{reviews[c]['mail']}}</h2>
-					<h3>{{reviews[c]['phone']}}</h3>
-
+					<h2><ddk2>Autor: {{article[c]['nik']}}</ddk2></h2>
+					<h3><ddk2>Tel: {{article[c]['phone']}}</ddk2></h3>
 						<ol>
-							<% for j in range(len(user_reviews)): %>
-								<p> {{user_reviews[j]}}</p>
-								<p>{{date_of_reviews[j]}}</p>
+							<% for j in range(len(Name_article)): %>
+								<p><ddk2>{{Name_article[j]}}<ddk2></p>
+								<p><ddk>{{user_reviews[j]}}<ddk></p>
+								<p align ="left"><ddk> Date publication: {{date_of_reviews[j]}}<ddk></left>
 							<% end %>
+							<h3><ddkHading> ***** </ddkHading></h3>
 						</ol>
-				</form>
 			<% end %>
 		<% end %>
 	</body>
-
-	<script>
-		// Функция проверки заполнения формы
-		function rev_btn() {
-			document.getElementById("Current_novelties").action = "/Current_novelties";
-			document.getElementById("Current_novelties").method = "post";	
-		}
-	</script>
-</header_char>
+</form>
