@@ -35,12 +35,13 @@
   <body>
    
     <div id="window">
-     You can write your article here, which we will post on our website. To do this, you need to write your Nickname, the title of the article, the text of the article and the date of creation </div>
+     You can write your article here, which we will post on our website. To do this, you need to write your Nickname, the title of the article, the text of the article and your phone number of creation </div>
      
     <a href="#window"> <ddk>More detailed</ddk></a>
  
   </body>
 </html>
+
 
 <form action="/Current_novelties" method="post">
     <!-- Заголовок -->
@@ -51,8 +52,8 @@
 			<p><ddk><input type="text" name="NIK" placeholder="Enter your nik" id="nik" pattern="([A-Za-z0-9]{7,})+" title="The nickname must consist of at least 7 characters" required></ddk></p>
 			<p><ddk><input type="text" name="PHONE" placeholder="Enter the phone number" id="phone" 
 			pattern="^[+]\d[(]\d{3}[)]\d{3}[-]\d{2}[-]\d{2}$" title="Enter the phone number in the specified format - +#(###)###-##-##" required></ddk></p>
-			<p><ddk><input type="text" rows="3" cols="100" name="Name_article" placeholder="Name current article" id="Name_article" pattern="([A-Za-z0-9]{7,})+" title="The Name current article must consist of at least 7 characters" required></ddk></p> 
-			<p><ddk><textarea input type="text" rows="10" cols="100" name="Current_article" placeholder="The text of the article" id="review" required></textarea></ddk></p> 
+			<p><ddk><input type="text" rows="3" cols="100" name="Name_article" placeholder="Name current article" id="Name_article" minlength="6" maxlength="50" title="The Name current article must consist of at least 7 characters" required></ddk></p> 
+			<p><ddk><textarea input type="text" rows="10" cols="100" name="Current_article" placeholder="The text of the article" id="review" minlength="100" maxlength="10000" required></textarea></ddk></p> 
 			<p><input type="submit" value="Send" class="btn btn-warning btn-lg" required></a></p>
 		</form>
 
